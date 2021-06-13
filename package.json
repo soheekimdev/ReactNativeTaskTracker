@@ -12,6 +12,8 @@
   "dependencies": {
     "react": "17.0.1",
     "react-native": "0.64.2",
+    "react-native-uuid": "^2.0.1",
+    "uuid4": "^2.0.2",
     "uuidv4": "^6.2.10"
   },
   "devDependencies": {
