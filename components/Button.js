@@ -1,7 +1,7 @@
 import React from 'react';
 import { Pressable, Text, StyleSheet } from 'react-native';
 
-const Button = ({ text, onPress }) => {
+const Button = ({ text }) => {
   return (
     <Pressable style={styles.button}>
       <Text style={styles.text}>{text}</Text>

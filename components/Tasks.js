@@ -5,10 +5,9 @@ import uuid from 'react-native-uuid';
 
 const Tasks = () => {
   const [tasks, setTasks] = useState([
-    { id: uuid.v4(), text: 'Todo 1' },
-    { id: uuid.v4(), text: 'Todo 2' },
-    { id: uuid.v4(), text: 'Todo 3' },
-    { id: uuid.v4(), text: 'Todo 4' },
+    { id: uuid.v4(), text: 'Doctors Apppointment', day: 'Feb 5th at 2:30pm' },
+    { id: uuid.v4(), text: 'Meeting at School', day: 'Feb 6th at 1:30pm' },
+    { id: uuid.v4(), text: 'Food Shopping', day: 'Feb 5th at 2:30pm' },
   ]);
 
   return (

@@ -1,13 +1,18 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
-// import Icon from 'react-native-vector-icons/dist/FontAwesome';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const Task = ({ task }) => {
   return (
-    <TouchableOpacity style={styles.task}>
+    <TouchableOpacity style={[styles.task, styles.reminder]}>
       <View style={styles.taskView}>
-        <Text style={styles.taskText}>{task.text}</Text>
-        {/* <Icon name="remove" size={20} color="firebrick" /> */}
+        <Text style={styles.taskText}>
+          {task.text}
+          <Icon name="remove" style={styles.taskIcon} />
+        </Text>
+        <Text>
+          {task.day}
+        </Text>
       </View>
     </TouchableOpacity>
   );
@@ -20,6 +25,10 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderColor: '#eee',
   },
+  reminder: {
+    borderLeftColor: 'green',
+    borderLeftWidth: 6
+  },
   taskView: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -27,6 +36,10 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
+  },
+  taskIcon: {
+    fontSize: 20,
+    color: 'firebrick',
   }
 });
 
