@@ -1,18 +1,18 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-const Task = ({ title }) => {
+const Task = ({ task }) => {
   return (
-    <View style={styles.task}>
-      <Text>{title}</Text>
-    </View>
+    <TouchableOpacity>
+      <View>
+        <Text>{task.text}</Text>
+      </View>
+    </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
-  task: {
-    
-  },
+  
 });
 
 export default Task;
