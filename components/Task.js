@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const Task = ({ task, deleteTask }) => {
+
   return (
     <TouchableOpacity style={[styles.task, styles.reminder]}>
       <View style={styles.taskView}>
@@ -24,8 +25,8 @@ const styles = StyleSheet.create({
     borderColor: '#eee',
   },
   reminder: {
-    borderLeftColor: 'green',
-    borderLeftWidth: 6
+    borderLeftColor: '#444',
+    borderLeftWidth: 6,
   },
   taskView: {
     flexDirection: 'row',
@@ -34,10 +35,11 @@ const styles = StyleSheet.create({
   },
   taskText: {
     fontSize: 18,
+    fontWeight: '500',
   },
   taskIcon: {
     fontSize: 20,
-    color: 'firebrick',
+    color: 'red',
   }
 });
 
