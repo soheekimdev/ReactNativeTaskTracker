@@ -2,17 +2,15 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-const Task = ({ task }) => {
+const Task = ({ task, deleteTask }) => {
   return (
     <TouchableOpacity style={[styles.task, styles.reminder]}>
       <View style={styles.taskView}>
-        <Text style={styles.taskText}>
-          {task.text}
-          <Icon name="remove" style={styles.taskIcon} />
-        </Text>
-        <Text>
-          {task.day}
-        </Text>
+        <Text style={styles.taskText}>{task.text}</Text>
+        <Icon name="remove" style={styles.taskIcon} onPress={() => deleteTask(task.id)} />
+      </View>
+      <View>
+        <Text>{task.day}</Text>
       </View>
     </TouchableOpacity>
   );
