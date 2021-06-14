@@ -1,11 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+// import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const Task = ({ task }) => {
   return (
     <TouchableOpacity style={styles.task}>
       <View style={styles.taskView}>
         <Text style={styles.taskText}>{task.text}</Text>
+        {/* <Icon name="remove" size={20} color="firebrick" /> */}
       </View>
     </TouchableOpacity>
   );

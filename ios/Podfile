@@ -12,6 +12,8 @@ target 'ReactNativeTaskTracker' do
     :hermes_enabled => false
   )
 
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
   target 'ReactNativeTaskTrackerTests' do
     inherit! :complete
     # Pods for testing
@@ -24,6 +26,6 @@ target 'ReactNativeTaskTracker' do
   use_flipper!()
 
   post_install do |installer|
-    react_native_post_install(installer)
+    flipper_post_install(installer)
   end
 end
